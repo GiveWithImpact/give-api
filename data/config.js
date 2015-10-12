@@ -40,3 +40,22 @@ switch ( exports.environment ) {
 
 // Max records to be returned by a GET-all-records call
 exports.maxRecords = 100;
+
+// Initialize database connection
+var Sequelize = require('sequelize');
+var sequelize = new Sequelize(
+	exports.database.dbname,
+	exports.database.user,
+	exports.database.password,
+	{
+		host: exports.database.host,
+		dialect: 'mysql',
+		pool: {
+			max: 100,
+			min: 0,
+			idle: 10000
+		},
+		logging: (exports.DEBUG ? console.log : false)
+	}
+);
+exports.sequelize = sequelize;
