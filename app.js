@@ -1,7 +1,6 @@
 // Load app config file
 var config = require(__dirname + '/data/config');
-var api_url = '/api/v' + config.apiVersion;
-var version_dir = __dirname + '/v' + config.apiVersion;
+var api_url = '/api';
 
 // Configure routing
 var express = require('express');
@@ -28,34 +27,21 @@ var cors = require(__dirname + '/middleware/cors');
 cors(authApiRouter);
 cors(apiRouter);
 
-// Setup auth middleware for auth router
-var authMiddleware = require(__dirname + '/middleware/auth');
-authApiRouter.use(authMiddleware);
+/*
+	Load custom modules
+ */
 
-// Load controllers
-var authApi = require(version_dir + '/controllers/authApi');
-var testApi = require(version_dir + '/controllers/testApi');
-var usersApi = require(version_dir + '/controllers/usersApi');
+// Auth
+var AuthModule = require(__dirname + '/modules/auth');
+AuthModule.initRoutes(apiRouter, authApiRouter);
 
-// Enable logging
-server.use(morgan('dev'));
+// Test
+var TestModule = require(__dirname + '/modules/test');
+TestModule.initRoutes(apiRouter, authApiRouter);
 
-// Implement auth API
-apiRouter.get('/auth/hash/:username/:password', authApi.getPasswordHash);
-apiRouter.post('/auth/login', authApi.login);
-authApiRouter.get('/auth/logout', authApi.logOut);
-authApiRouter.get('/auth/test', authApi.test);
-
-// Implement simple ping test
-apiRouter.get('/test/ping', testApi.getPing);
-apiRouter.get('/test/health', testApi.getHealth);
-
-// Define routes for Users API
-authApiRouter.get('/users', usersApi.findAll);
-authApiRouter.get('/user/:id', usersApi.findById);
-authApiRouter.post('/user', usersApi.addOne);
-authApiRouter.put('/user/:id', usersApi.updateOne);
-authApiRouter.delete('/user/:id', usersApi.deleteOne);
+// Users
+var UsersModule = require(__dirname + '/modules/users');
+UsersModule.initRoutes(apiRouter, authApiRouter);
 
 // Configure application error handler
 server.use(function(err, req, res, next) {

@@ -1,0 +1,108 @@
+/*
+ Standard CRUD Controller for the Users module
+ config and models should be passed in to constructor
+ */
+module.exports = function ( config, models ) {
+
+	// Users service and model
+	var UsersService = require(__dirname + '/../services/users')(config, models);
+
+	return {
+
+		// Get a single record by Id
+		findById: function ( req, res, next ) {
+			UsersService.findById(req.params.id).then(
+				function ( record ) {
+					res.status(200).send(
+						UsersService.cleanUser(record)
+					);
+				},
+				function ( Error ) {
+					return res.status(Error.code).send(Error.message);
+				}
+			);
+		},
+
+		// Return all Users by search query
+		findAll: function ( req, res, next ) {
+
+			// Build query
+			var offset = parseInt(req.query.offset || 0);
+			var limit = parseInt(req.query.limit || config.maxRecords);
+			var query = req.query.q;
+
+			UsersService.findAll(query, limit, offset).then(
+				function ( data ) {
+
+					// Clean records
+					var records = [];
+					data.records.forEach(function ( record ) {
+						records.push(UsersService.cleanUser(record));
+					});
+					data.records = records;
+
+					res.status(200).send(data);
+				},
+				function ( Error ) {
+					return res.status(Error.code).send(Error.message);
+				}
+			);
+
+		},
+
+		// Create a single new record
+		addOne: function ( req, res, next ) {
+
+			// Attempt to create the user record
+			UsersService.create(req.body).then(
+				function ( User ) {
+					res.setHeader('Location', '/user/' + User.id);
+					return res.status(201).send(UsersService.cleanUser(User));
+				},
+				function ( Error ) {
+					return res.status(Error.code).send(Error.message);
+				}
+			);
+
+		},
+
+		// Update a single record
+		updateOne: function ( req, res, next ) {
+
+			// Construct our update user
+			var User = req.body;
+			User.id = req.params.id;
+			User.organisation_id = config.Users.default_organisation_id;
+
+			// Save the changes
+			UsersService.save(User).then(
+				function ( record ) {
+					res.setHeader('Location', '/user/' + record.id);
+					res.status(200).send(record);
+				},
+				function ( Error ) {
+					res.status(Error.code).send(Error.message);
+				}
+			);
+
+		},
+
+		// Delete a single record
+		deleteOne: function ( req, res, next ) {
+
+			// Delete the user
+			UsersService.delete(req.params.id).then(
+				function ( record ) {
+					res.status(200).send(record);
+				},
+				function ( Error ) {
+					res.status(Error.code).send(Error.message);
+				}
+			);
+
+		}
+
+	};
+
+};
+
