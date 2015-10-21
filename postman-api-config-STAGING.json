@@ -1,6 +1,6 @@
 {
-	"id": "8bc09f0a-38be-8165-4702-3275bfcf12d3",
-	"name": "Give API (Local)",
+	"id": "8bc09f0a-38be-8165-4702-3275bfcf12d3ABC",
+	"name": "Give API (Staging)",
 	"description": "",
 	"order": [
 		"88b1542b-1215-9a2e-d8bd-f9a03e6051ed",
@@ -26,11 +26,11 @@
 	"write": true,
 	"requests": [
 		{
-			"collectionId": "8bc09f0a-38be-8165-4702-3275bfcf12d3",
+			"collectionId": "8bc09f0a-38be-8165-4702-3275bfcf12d3ABC",
 			"id": "01c5b015-6782-364d-7f90-3ed0007814d8",
 			"name": "DELETE a single User",
 			"description": "",
-			"url": "http://localhost:8100/api/v0.1/user/2",
+			"url": "http://node01.wallstreetdocs.com:8100/api/v0.1/user/2",
 			"method": "DELETE",
 			"headers": "Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmF0b3IiLCJwYXNzd29yZF9oYXNoIjoiZGFmNDdiNTZkYzI3OThiZjFmYzRmZmU2MjVkZGEzMWMwNzUxYjhkYiIsInVzZXJfdHlwZV9pZCI6MSwib3JnYW5pc2F0aW9uX2lkIjoxMDEsImdjbV9yZWdfY29kZSI6bnVsbCwiZW1haWwiOiJzdXBwb3J0QHdhbGxzdHJlZXRkb2NzLmNvbSIsInRva2VuIjpudWxsLCJpYXQiOjE0NDQ2NTA2NzUsImV4cCI6MTQ0NDY2NTA3NSwiY3JlYXRlZF9hdCI6IjIwMTUtMTAtMDlUMDA6MDA6MDAuMDAwWiIsInVwZGF0ZWRfYXQiOiIyMDE1LTEwLTEyVDExOjUxOjExLjAwMFoifQ.Drk3HMh_rOqvOYxvLS7DCODCimWZ-jvYeBklAnwXAX8\n",
 			"data": [],
@@ -44,7 +44,7 @@
 			"id": "04f10b4a-1728-e64b-7c98-58abfdc1e752",
 			"name": "POST | Auth | Login",
 			"description": "",
-			"url": "http://localhost:8100/api/v0.1/auth/login",
+			"url": "http://node01.wallstreetdocs.com:8100/api/v0.1/auth/login",
 			"method": "POST",
 			"headers": "",
 			"data": [
@@ -69,7 +69,7 @@
 			"id": "0dd0f74f-e1be-37ad-7871-b5df40f4d2e1",
 			"name": "GET | Auth | Hash",
 			"description": "",
-			"url": "http://localhost:8100/api/v0.1/auth/hash/admin/password123",
+			"url": "http://node01.wallstreetdocs.com:8100/api/v0.1/auth/hash/admin/password123",
 			"method": "GET",
 			"headers": "Content-Type: application/json\n",
 			"data": [],
@@ -82,7 +82,7 @@
 			"id": "12fffa1c-2541-0cbd-3176-883512619127",
 			"name": "GET User by Id",
 			"description": "",
-			"url": "http://localhost:8100/api/v0.1/user/1",
+			"url": "http://node01.wallstreetdocs.com:8100/api/v0.1/user/1",
 			"method": "GET",
 			"headers": "Content-Type: application/json\nAuthorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmF0b3IiLCJwYXNzd29yZF9oYXNoIjoiZGFmNDdiNTZkYzI3OThiZjFmYzRmZmU2MjVkZGEzMWMwNzUxYjhkYiIsInVzZXJfdHlwZV9pZCI6MSwib3JnYW5pc2F0aW9uX2lkIjoxMDEsImdjbV9yZWdfY29kZSI6bnVsbCwiZW1haWwiOiJzdXBwb3J0QHdhbGxzdHJlZXRkb2NzLmNvbSIsInRva2VuIjpudWxsLCJpYXQiOjE0NDQ2NTA2NzUsImV4cCI6MTQ0NDY2NTA3NSwiY3JlYXRlZF9hdCI6IjIwMTUtMTAtMDlUMDA6MDA6MDAuMDAwWiIsInVwZGF0ZWRfYXQiOiIyMDE1LTEwLTEyVDExOjUxOjExLjAwMFoifQ.Drk3HMh_rOqvOYxvLS7DCODCimWZ-jvYeBklAnwXAX8\n",
 			"data": [
@@ -107,7 +107,7 @@
 			"id": "170b285e-12bb-3975-b36d-f6a403d4e0f3",
 			"name": "GET | Auth | Test",
 			"description": "",
-			"url": "http://localhost:8100/api/v0.1/auth/test",
+			"url": "http://node01.wallstreetdocs.com:8100/api/v0.1/auth/test",
 			"method": "GET",
 			"headers": "Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmF0b3IiLCJwYXNzd29yZF9oYXNoIjoiZGFmNDdiNTZkYzI3OThiZjFmYzRmZmU2MjVkZGEzMWMwNzUxYjhkYiIsInVzZXJfdHlwZV9pZCI6MSwib3JnYW5pc2F0aW9uX2lkIjoxMDEsImdjbV9yZWdfY29kZSI6bnVsbCwiZW1haWwiOiJzdXBwb3J0QHdhbGxzdHJlZXRkb2NzLmNvbSIsInRva2VuIjpudWxsLCJpYXQiOjE0NDQ2NTA2NzUsImV4cCI6MTQ0NDY2NTA3NSwiY3JlYXRlZF9hdCI6IjIwMTUtMTAtMDlUMDA6MDA6MDAuMDAwWiIsInVwZGF0ZWRfYXQiOiIyMDE1LTEwLTEyVDExOjUxOjExLjAwMFoifQ.Drk3HMh_rOqvOYxvLS7DCODCimWZ-jvYeBklAnwXAX8\n",
 			"data": [
@@ -132,7 +132,7 @@
 			"id": "1b779505-6db4-8457-c590-6848b54a3e7c",
 			"name": "GET | Auth | Logout",
 			"description": "",
-			"url": "http://localhost:8100/api/v0.1/auth/logout",
+			"url": "http://node01.wallstreetdocs.com:8100/api/v0.1/auth/logout",
 			"method": "GET",
 			"headers": "Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmF0b3IiLCJwYXNzd29yZF9oYXNoIjoiZGFmNDdiNTZkYzI3OThiZjFmYzRmZmU2MjVkZGEzMWMwNzUxYjhkYiIsInVzZXJfdHlwZV9pZCI6MSwib3JnYW5pc2F0aW9uX2lkIjoxMDEsImdjbV9yZWdfY29kZSI6bnVsbCwiZW1haWwiOiJzdXBwb3J0QHdhbGxzdHJlZXRkb2NzLmNvbSIsInRva2VuIjpudWxsLCJpYXQiOjE0NDQ0MDU3MTgsImV4cCI6MTQ0NDQyMDExOCwiY3JlYXRlZF9hdCI6IjIwMTUtMTAtMDlUMDA6MDA6MDAuMDAwWiIsInVwZGF0ZWRfYXQiOiIyMDE1LTEwLTA5VDE1OjQ4OjMwLjAwMFoifQ.-_5Mz00eAUwJQFGMbLMBH7LTIo117lKVvqZPeWY8z_M\n",
 			"data": [
@@ -157,7 +157,7 @@
 			"id": "348c162c-9d5d-120f-07bd-062e3de53819",
 			"name": "GET All Users by Query",
 			"description": "",
-			"url": "http://localhost:8100/api/v0.1/users?q=&limit=&offset=",
+			"url": "http://node01.wallstreetdocs.com:8100/api/v0.1/users?q=&limit=&offset=",
 			"method": "GET",
 			"headers": "Content-Type: application/json\nAuthorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmF0b3IiLCJwYXNzd29yZF9oYXNoIjoiZGFmNDdiNTZkYzI3OThiZjFmYzRmZmU2MjVkZGEzMWMwNzUxYjhkYiIsInVzZXJfdHlwZV9pZCI6MSwib3JnYW5pc2F0aW9uX2lkIjoxMDEsImdjbV9yZWdfY29kZSI6bnVsbCwiZW1haWwiOiJzdXBwb3J0QHdhbGxzdHJlZXRkb2NzLmNvbSIsInRva2VuIjpudWxsLCJpYXQiOjE0NDQ2NTA2NzUsImV4cCI6MTQ0NDY2NTA3NSwiY3JlYXRlZF9hdCI6IjIwMTUtMTAtMDlUMDA6MDA6MDAuMDAwWiIsInVwZGF0ZWRfYXQiOiIyMDE1LTEwLTEyVDExOjUxOjExLjAwMFoifQ.Drk3HMh_rOqvOYxvLS7DCODCimWZ-jvYeBklAnwXAX8\n",
 			"data": [
@@ -182,7 +182,7 @@
 			"id": "4fea8099-2dba-a54d-21aa-2086a6d78354",
 			"name": "GET | Test | Health",
 			"description": "",
-			"url": "http://localhost:8100/api/v0.1/test/health",
+			"url": "http://node01.wallstreetdocs.com:8100/api/v0.1/test/health",
 			"method": "GET",
 			"headers": "Content-Type: application/json\nAuthorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmF0b3IiLCJwYXNzd29yZF9oYXNoIjoiZGFmNDdiNTZkYzI3OThiZjFmYzRmZmU2MjVkZGEzMWMwNzUxYjhkYiIsInVzZXJfdHlwZV9pZCI6MSwib3JnYW5pc2F0aW9uX2lkIjoxMDEsImdjbV9yZWdfY29kZSI6bnVsbCwiZW1haWwiOiJzdXBwb3J0QHdhbGxzdHJlZXRkb2NzLmNvbSIsInRva2VuIjpudWxsLCJpYXQiOjE0NDQ2NTA2NzUsImV4cCI6MTQ0NDY2NTA3NSwiY3JlYXRlZF9hdCI6IjIwMTUtMTAtMDlUMDA6MDA6MDAuMDAwWiIsInVwZGF0ZWRfYXQiOiIyMDE1LTEwLTEyVDExOjUxOjExLjAwMFoifQ.Drk3HMh_rOqvOYxvLS7DCODCimWZ-jvYeBklAnwXAX8\n",
 			"data": [
@@ -207,7 +207,7 @@
 			"id": "88b1542b-1215-9a2e-d8bd-f9a03e6051ed",
 			"name": "GET | Test | Ping",
 			"description": "",
-			"url": "http://localhost:8100/api/v0.1/test/ping",
+			"url": "http://node01.wallstreetdocs.com:8100/api/v0.1/test/ping",
 			"method": "GET",
 			"headers": "Content-Type: application/json\n",
 			"data": [],
@@ -220,7 +220,7 @@
 			"id": "c51de005-d660-9ae1-4da8-78ccc5052761",
 			"name": "UPDATE a single User",
 			"description": "",
-			"url": "http://localhost:8100/api/v0.1/user/2",
+			"url": "http://node01.wallstreetdocs.com:8100/api/v0.1/user/2",
 			"method": "PUT",
 			"headers": "Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmF0b3IiLCJwYXNzd29yZF9oYXNoIjoiZGFmNDdiNTZkYzI3OThiZjFmYzRmZmU2MjVkZGEzMWMwNzUxYjhkYiIsInVzZXJfdHlwZV9pZCI6MSwib3JnYW5pc2F0aW9uX2lkIjoxMDEsImdjbV9yZWdfY29kZSI6bnVsbCwiZW1haWwiOiJzdXBwb3J0QHdhbGxzdHJlZXRkb2NzLmNvbSIsInRva2VuIjpudWxsLCJpYXQiOjE0NDQ2NTA2NzUsImV4cCI6MTQ0NDY2NTA3NSwiY3JlYXRlZF9hdCI6IjIwMTUtMTAtMDlUMDA6MDA6MDAuMDAwWiIsInVwZGF0ZWRfYXQiOiIyMDE1LTEwLTEyVDExOjUxOjExLjAwMFoifQ.Drk3HMh_rOqvOYxvLS7DCODCimWZ-jvYeBklAnwXAX8\n",
 			"data": [
@@ -260,7 +260,7 @@
 			"id": "f3287c60-f425-281d-6da1-2c3727cba764",
 			"name": "POST Create new User",
 			"description": "",
-			"url": "http://localhost:8100/api/v0.1/user",
+			"url": "http://node01.wallstreetdocs.com:8100/api/v0.1/user",
 			"method": "POST",
 			"headers": "Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmF0b3IiLCJwYXNzd29yZF9oYXNoIjoiZGFmNDdiNTZkYzI3OThiZjFmYzRmZmU2MjVkZGEzMWMwNzUxYjhkYiIsInVzZXJfdHlwZV9pZCI6MSwib3JnYW5pc2F0aW9uX2lkIjoxMDEsImdjbV9yZWdfY29kZSI6bnVsbCwiZW1haWwiOiJzdXBwb3J0QHdhbGxzdHJlZXRkb2NzLmNvbSIsInRva2VuIjpudWxsLCJpYXQiOjE0NDQ2NTA2NzUsImV4cCI6MTQ0NDY2NTA3NSwiY3JlYXRlZF9hdCI6IjIwMTUtMTAtMDlUMDA6MDA6MDAuMDAwWiIsInVwZGF0ZWRfYXQiOiIyMDE1LTEwLTEyVDExOjUxOjExLjAwMFoifQ.Drk3HMh_rOqvOYxvLS7DCODCimWZ-jvYeBklAnwXAX8\n",
 			"data": [
