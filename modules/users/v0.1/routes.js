@@ -20,4 +20,7 @@ module.exports = function ( router, authRouter ) {
 	authRouter.put('/v0.1/user/:id', crudController.updateOne);
 	authRouter.delete('/v0.1/user/:id', crudController.deleteOne);
 
+	// Aliases
+	authRouter.post('/v0.1/account/registration', crudController.addOne);
+
 };
