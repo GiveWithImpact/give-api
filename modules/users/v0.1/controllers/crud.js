@@ -11,6 +11,12 @@ module.exports = function ( config, models ) {
 
 		// Get a single record by Id
 		findById: function ( req, res, next ) {
+
+			// Check that the current user is an admin
+			if (req.user.user_type_id != UsersService.userTypes.Admin.id){
+				return res.status(401).send('Unauthorized.');
+			}
+
 			UsersService.findById(req.params.id).then(
 				function ( record ) {
 					res.status(200).send(
@@ -25,6 +31,11 @@ module.exports = function ( config, models ) {
 
 		// Return all Users by search query
 		findAll: function ( req, res, next ) {
+
+			// Check that the current user is an admin
+			if (req.user.user_type_id != UsersService.userTypes.Admin.id){
+				return res.status(401).send('Unauthorized.');
+			}
 
 			// Build query
 			var offset = parseInt(req.query.offset || 0);
@@ -53,6 +64,11 @@ module.exports = function ( config, models ) {
 		// Create a single new record
 		addOne: function ( req, res, next ) {
 
+			// Check that the current user is an admin
+			if (req.user.user_type_id != UsersService.userTypes.Admin.id){
+				return res.status(401).send('Unauthorized.');
+			}
+
 			// Attempt to create the user record
 			UsersService.create(req.body).then(
 				function ( User ) {
@@ -72,7 +88,11 @@ module.exports = function ( config, models ) {
 			// Construct our update user
 			var User = req.body;
 			User.id = req.params.id;
-			User.organisation_id = config.Users.default_organisation_id;
+
+			// Check that the current user is an admin
+			if (req.user.user_type_id != UsersService.userTypes.Admin.id){
+				return res.status(401).send('Unauthorized.');
+			}
 
 			// Save the changes
 			UsersService.save(User).then(
@@ -87,8 +107,46 @@ module.exports = function ( config, models ) {
 
 		},
 
+		// Update the profile for the current user
+		updateOwnProfile: function ( req, res, next ) {
+
+			// Construct our update user
+			var Profile = req.body;
+			var user_id = req.user.id;
+
+			// Find our user
+			UsersService.findById(user_id).then(
+				function ( User ) {
+
+					// Update the profile
+					User.profile = JSON.stringify(Profile);
+
+					// Save the changes
+					UsersService.save(User).then(
+						function ( record ) {
+							res.setHeader('Location', '/user/' + record.id);
+							res.status(200).send(record);
+						},
+						function ( Error ) {
+							res.status(Error.code).send(Error.message);
+						}
+					);
+
+				},
+				function ( Error ) {
+					return res.status(Error.code).send(Error.message);
+				}
+			);
+
+		},
+
 		// Delete a single record
 		deleteOne: function ( req, res, next ) {
+
+			// Check that the current user is an admin
+			if (req.user.user_type_id != UsersService.userTypes.Admin.id){
+				return res.status(401).send('Unauthorized.');
+			}
 
 			// Delete the user
 			UsersService.delete(req.params.id).then(

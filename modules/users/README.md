@@ -15,7 +15,7 @@
             - limit
             - offset
 	- Returns a JSON object containing pagination information and a list of record objects
-	- Searches on name, email and gcm_reg_code fields
+	- Searches on name, email fields
 	
 - POST | `/user`
     - Requires `Authorization` header
