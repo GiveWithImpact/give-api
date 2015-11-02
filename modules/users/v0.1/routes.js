@@ -22,6 +22,6 @@ module.exports = function ( config, server, router, models ) {
 	router.delete('/v0.1/user/:id', passport.authenticate('local-bearer', { session: false }), crudController.deleteOne);
 
 	// Aliases
-	router.post('/v0.1/account/registration', passport.authenticate('local-bearer', { session: false }), crudController.addOne);
+	router.post('/v0.1/account/registration', crudController.addOne);
 
 };
