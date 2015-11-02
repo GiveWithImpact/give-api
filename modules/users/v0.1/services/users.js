@@ -2,7 +2,7 @@
  Users Service
  */
 
-module.exports =  function(config, models){
+module.exports = function ( config, models ) {
 
 	var crypto = require('crypto');
 	var jwt = require("jsonwebtoken");
@@ -12,7 +12,7 @@ module.exports =  function(config, models){
 	var UsersService = {
 
 		// List of user types
-		userTypes: {
+		userTypes    : {
 			Admin  : {
 				id: 1, label: 'Administrator'
 			},
@@ -28,19 +28,19 @@ module.exports =  function(config, models){
 		// Create a password hash
 		createPasswordHash: function ( username, password ) {
 
-		// In php equivalent to:
-		/*
-		 sha1(sha1(password . sha1(username)))
-		 */
-		var password_hash = crypto.createHash('sha1')
-			.update(username).digest("hex");
-		password_hash = crypto.createHash('sha1')
-			.update(password + password_hash).digest("hex");
-		password_hash = crypto.createHash('sha1')
-			.update(password_hash).digest("hex");
-		return password_hash;
+			// In php equivalent to:
+			/*
+			 sha1(sha1(password . sha1(username)))
+			 */
+			var password_hash = crypto.createHash('sha1')
+				.update(username).digest("hex");
+			password_hash = crypto.createHash('sha1')
+				.update(password + password_hash).digest("hex");
+			password_hash = crypto.createHash('sha1')
+				.update(password_hash).digest("hex");
+			return password_hash;
 
-	},
+		},
 
 		// Decode a token for the user object
 		decodeToken: function ( token ) {
@@ -167,7 +167,7 @@ module.exports =  function(config, models){
 
 				// Validate password
 				var password_hash;
-				if (User.password_hash && User.password_hash.length > 0){
+				if ( User.password_hash && User.password_hash.length > 0 ) {
 					password_hash = User.password_hash;
 				} else {
 					if ( User.password.length == 0 ) {
@@ -201,12 +201,12 @@ module.exports =  function(config, models){
 								// Update the model
 								record.name = User.name;
 								record.email = User.email;
-								record.organisation_id = User.organisation_id;
+								record.organisation_id = config.Users.default_organisation_id;
 								record.user_type_id = User.user_type_id;
 								record.token = User.token;
 								record.gcm_reg_code = User.gcm_reg_code;
+								record.profile = User.profile;
 								record.password_hash = password_hash;
-								record.gcm_reg_code = User.gcm_reg_code;
 								record.iat = User.iat;
 								record.exp = User.exp;
 
@@ -269,7 +269,8 @@ module.exports =  function(config, models){
 							password_hash  : password_hash,
 							organisation_id: config.Users.default_organisation_id,
 							user_type_id   : User.user_type_id,
-							gcm_reg_code   : User.gcm_reg_code
+							gcm_reg_code   : User.gcm_reg_code,
+							profile        : User.profile
 						}).then(
 							function ( record ) {
 
@@ -316,19 +317,29 @@ module.exports =  function(config, models){
 
 		// Strip a user record down to client-safe fields
 		// cleanAuthUser() includes the token field
+		// Parse JSON profile property
 		cleanAuthUser: function ( User ) {
+			var profile;
+			try {
+				profile = JSON.parse(User.profile);
+			} catch (e) {
+				console.log('Invalid profile data:', User);
+				profile = {};
+			}
 			return {
 				id             : User.id,
+				name           : User.name,
 				email          : User.email,
 				organisation_id: User.organisation_id,
 				user_type_id   : User.user_type_id,
 				token          : User.token,
 				gcm_reg_code   : User.gcm_reg_code,
+				profile        : profile,
 				created_at     : User.created_at,
 				updated_at     : User.updated_at
 			};
 		},
-		cleanUser: function ( User ) {
+		cleanUser    : function ( User ) {
 			var CleanUser = this.cleanAuthUser(User);
 			delete CleanUser.token;
 			return CleanUser;

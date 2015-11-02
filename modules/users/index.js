@@ -16,11 +16,15 @@ module.exports = theModule;
  */
 
 // Initialise routing
-theModule.initRoutes = function ( router, authRouter ) {
+theModule.initRoutes = function ( server, router ) {
 
 	/*
 	 Version 0.1
 	 */
-	require(__dirname + '/v0.1/routes')(router, authRouter);
+	var config = require(__dirname + '/../../data/config');
+	config.Users = require(__dirname + '/v0.1/config');
+	config.Auth = require(__dirname + '/../auth/v0.1/config');
+	var models = require(__dirname + '/v0.1/models/index')(config);
+	require(__dirname + '/v0.1/routes')(config, server, router, models);
 
 };

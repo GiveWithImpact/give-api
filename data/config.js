@@ -13,25 +13,31 @@ switch ( exports.environment ) {
 	case 'development':
 		exports.server = {
 			host: 'localhost',
-			port: process.env.PORT || 8100
+			port: process.env.PORT || 8101
 		};
 		exports.database = {
 			host    : 'localhost',
 			user    : 'givewithimpact',
 			password: '6F@cLvgLPa-k6&hz',
 			dbname  : 'givewithimpact'
-		}; // grant all on givewithimpact.* to 'givewithimpact'@'localhost' identified by '6F@cLvgLPa-k6&hz';
+		};
 		break;
 	case 'staging':
 		exports.server = {
 			host: '0.0.0.0',
-			port: process.env.PORT || 8100
+			port: process.env.PORT || 8101
+		};
+		exports.database = {
+			host    : 'localhost',
+			user    : 'givewithimpact',
+			password: '6F@cLvgLPa-k6&hz',
+			dbname  : 'givewithimpact'
 		};
 		break;
 	case 'production':
 		exports.server = {
 			host: '0.0.0.0',
-			port: process.env.PORT || 8100
+			port: process.env.PORT || 8101
 		};
 		break;
 	default:

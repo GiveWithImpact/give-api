@@ -2,25 +2,26 @@
  Version 0.1 Users module routes
  */
 
-// Module config
-var config = require(__dirname + '/../../../data/config');
-config.Users = require(__dirname + '/config');
-
-// Module controllers - attach config and model constructor
-var models = require(__dirname + '/models/index')(config);
-var crudController = require(__dirname + '/controllers/crud.js')(config, models);
-
 // Module routes constructor
-module.exports = function ( router, authRouter ) {
+module.exports = function ( config, server, router, models ) {
+
+	/*
+		Version 0.1
+	 */
+	var passport = require(__dirname + '/../../auth/v0.1/passport')(config, server);
+	var crudController = require(__dirname + '/controllers/crud.js')(config, models);
+
+	// Allow a user to update their own profile
+	router.put('/v0.1/user/me', passport.authenticate('local-bearer', { session: false }), crudController.updateOwnProfile);
 
 	// Standard CRUD routes
-	authRouter.get('/v0.1/users', crudController.findAll);
-	authRouter.get('/v0.1/user/:id', crudController.findById);
-	authRouter.post('/v0.1/user', crudController.addOne);
-	authRouter.put('/v0.1/user/:id', crudController.updateOne);
-	authRouter.delete('/v0.1/user/:id', crudController.deleteOne);
+	router.get('/v0.1/users', passport.authenticate('local-bearer', { session: false }), crudController.findAll);
+	router.get('/v0.1/user/:id', passport.authenticate('local-bearer', { session: false }), crudController.findById);
+	router.post('/v0.1/user', passport.authenticate('local-bearer', { session: false }), crudController.addOne);
+	router.put('/v0.1/user/:id', passport.authenticate('local-bearer', { session: false }), crudController.updateOne);
+	router.delete('/v0.1/user/:id', passport.authenticate('local-bearer', { session: false }), crudController.deleteOne);
 
 	// Aliases
-	authRouter.post('/v0.1/account/registration', crudController.addOne);
+	router.post('/v0.1/account/registration', crudController.addOne);
 
 };

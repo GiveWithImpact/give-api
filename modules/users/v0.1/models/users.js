@@ -36,8 +36,12 @@ module.exports = function(sequelize, DataTypes) {
 				type: DataTypes.STRING(250),
 				allowNull: false
 			},
+			profile: {
+				type: DataTypes.TEXT(),
+				allowNull: false
+			},
 			token: {
-				type: DataTypes.STRING(500),
+				type: DataTypes.TEXT(),
 				allowNull: true
 			},
 			iat: {
@@ -52,9 +56,6 @@ module.exports = function(sequelize, DataTypes) {
 		{
 			underscored: true,
 			indexes: [
-				{
-					fields: ['token']
-				},
 				{
 					fields: ['organisation_id', 'name', 'email', 'gcm_reg_code']
 				},

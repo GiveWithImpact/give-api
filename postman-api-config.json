@@ -1,19 +1,25 @@
 {
-	"id": "8bc09f0a-38be-8165-4702-3275bfcf12d3",
+	"id": "47ca4b42-761c-7cbc-2146-92658e8df6dcZXT",
 	"name": "Give API (Local)",
 	"description": "",
 	"order": [
-		"88b1542b-1215-9a2e-d8bd-f9a03e6051ed",
-		"4fea8099-2dba-a54d-21aa-2086a6d78354",
-		"0dd0f74f-e1be-37ad-7871-b5df40f4d2e1",
-		"04f10b4a-1728-e64b-7c98-58abfdc1e752",
-		"170b285e-12bb-3975-b36d-f6a403d4e0f3",
-		"1b779505-6db4-8457-c590-6848b54a3e7c",
-		"348c162c-9d5d-120f-07bd-062e3de53819",
-		"12fffa1c-2541-0cbd-3176-883512619127",
-		"f3287c60-f425-281d-6da1-2c3727cba764",
-		"01c5b015-6782-364d-7f90-3ed0007814d8",
-		"c51de005-d660-9ae1-4da8-78ccc5052761"
+		"2058006e-4c2a-362a-d700-70e6a1fa147b",
+		"f7c2b663-b4b3-c917-e398-92a28c39fed5",
+		"61bf7dfc-252c-2391-f888-04386470c949",
+		"9b6ac92e-3085-6e7f-41eb-b36065628d75",
+		"a9687c44-2bd3-a8da-35ba-206038084c58",
+		"e22ad0f6-4bec-60e5-5549-b606f20aee5f",
+		"7b7524af-bf29-63b5-8a5d-fd645f084b26",
+		"3341e7cc-6fc1-0ab3-a9a9-1f8fd81f6000",
+		"ed3adfec-00ab-4915-2535-8ee1f4ea5fda",
+		"8eff62f2-d753-52e2-a459-0b0bedf12697",
+		"0f0d1ff5-bd6a-6856-8d10-19949c67654b",
+		"f5376928-62a6-e442-3b7f-895ecac25126",
+		"7a1c365b-5eb2-6b70-e42d-76e4acbe4e59",
+		"2fc433c6-7038-964e-0863-d5e44246d8ec",
+		"cfa305b7-b7c2-02ee-88d2-370a87f01844",
+		"5e05d480-68dd-b76c-7541-5a644f3affca",
+		"95995066-98fc-ba66-25ea-79d45b861918"
 	],
 	"folders": [],
 	"timestamp": 1405633421763,
@@ -26,243 +32,61 @@
 	"write": true,
 	"requests": [
 		{
-			"collectionId": "8bc09f0a-38be-8165-4702-3275bfcf12d3",
-			"id": "01c5b015-6782-364d-7f90-3ed0007814d8",
-			"name": "DELETE a single User",
+			"collectionId": "47ca4b42-761c-7cbc-2146-92658e8df6dcZXT",
+			"id": "0f0d1ff5-bd6a-6856-8d10-19949c67654b",
+			"name": "PUT Update a single Customer",
 			"description": "",
-			"url": "http://localhost:8100/api/v0.1/user/2",
-			"method": "DELETE",
-			"headers": "Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmF0b3IiLCJwYXNzd29yZF9oYXNoIjoiZGFmNDdiNTZkYzI3OThiZjFmYzRmZmU2MjVkZGEzMWMwNzUxYjhkYiIsInVzZXJfdHlwZV9pZCI6MSwib3JnYW5pc2F0aW9uX2lkIjoxMDEsImdjbV9yZWdfY29kZSI6bnVsbCwiZW1haWwiOiJzdXBwb3J0QHdhbGxzdHJlZXRkb2NzLmNvbSIsInRva2VuIjpudWxsLCJpYXQiOjE0NDQ2NTA2NzUsImV4cCI6MTQ0NDY2NTA3NSwiY3JlYXRlZF9hdCI6IjIwMTUtMTAtMDlUMDA6MDA6MDAuMDAwWiIsInVwZGF0ZWRfYXQiOiIyMDE1LTEwLTEyVDExOjUxOjExLjAwMFoifQ.Drk3HMh_rOqvOYxvLS7DCODCimWZ-jvYeBklAnwXAX8\n",
-			"data": [],
-			"dataMode": "urlencoded",
-			"timestamp": 0,
-			"version": 2,
-			"time": 1444650742331
-		},
-		{
-			"collectionId": "8bc09f0a-38be-8165-4702-3275bfcf12d3",
-			"id": "04f10b4a-1728-e64b-7c98-58abfdc1e752",
-			"name": "POST | Auth | Login",
-			"description": "",
-			"url": "http://localhost:8100/api/v0.1/auth/login",
-			"method": "POST",
-			"headers": "",
-			"data": [
-				{
-					"key": "username",
-					"value": "support@wallstreetdocs.com",
-					"type": "text"
-				},
-				{
-					"key": "password",
-					"value": "password123",
-					"type": "text"
-				}
-			],
-			"dataMode": "urlencoded",
-			"timestamp": 0,
-			"version": 2,
-			"time": 1444405098353
-		},
-		{
-			"collectionId": "8bc09f0a-38be-8165-4702-3275bfcf12d3",
-			"id": "0dd0f74f-e1be-37ad-7871-b5df40f4d2e1",
-			"name": "GET | Auth | Hash",
-			"description": "",
-			"url": "http://localhost:8100/api/v0.1/auth/hash/admin/password123",
-			"method": "GET",
-			"headers": "Content-Type: application/json\n",
-			"data": [],
-			"dataMode": "params",
-			"responses": [],
-			"version": 2
-		},
-		{
-			"collectionId": "8bc09f0a-38be-8165-4702-3275bfcf12d3",
-			"id": "12fffa1c-2541-0cbd-3176-883512619127",
-			"name": "GET User by Id",
-			"description": "",
-			"url": "http://localhost:8100/api/v0.1/user/1",
-			"method": "GET",
-			"headers": "Content-Type: application/json\nAuthorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmF0b3IiLCJwYXNzd29yZF9oYXNoIjoiZGFmNDdiNTZkYzI3OThiZjFmYzRmZmU2MjVkZGEzMWMwNzUxYjhkYiIsInVzZXJfdHlwZV9pZCI6MSwib3JnYW5pc2F0aW9uX2lkIjoxMDEsImdjbV9yZWdfY29kZSI6bnVsbCwiZW1haWwiOiJzdXBwb3J0QHdhbGxzdHJlZXRkb2NzLmNvbSIsInRva2VuIjpudWxsLCJpYXQiOjE0NDQ2NTA2NzUsImV4cCI6MTQ0NDY2NTA3NSwiY3JlYXRlZF9hdCI6IjIwMTUtMTAtMDlUMDA6MDA6MDAuMDAwWiIsInVwZGF0ZWRfYXQiOiIyMDE1LTEwLTEyVDExOjUxOjExLjAwMFoifQ.Drk3HMh_rOqvOYxvLS7DCODCimWZ-jvYeBklAnwXAX8\n",
-			"data": [
-				{
-					"key": "username",
-					"value": "support@wallstreetdocs.com",
-					"type": "text"
-				},
-				{
-					"key": "password",
-					"value": "password123",
-					"type": "text"
-				}
-			],
-			"dataMode": "urlencoded",
-			"timestamp": 0,
-			"version": 2,
-			"time": 1444650730269
-		},
-		{
-			"collectionId": "8bc09f0a-38be-8165-4702-3275bfcf12d3",
-			"id": "170b285e-12bb-3975-b36d-f6a403d4e0f3",
-			"name": "GET | Auth | Test",
-			"description": "",
-			"url": "http://localhost:8100/api/v0.1/auth/test",
-			"method": "GET",
-			"headers": "Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmF0b3IiLCJwYXNzd29yZF9oYXNoIjoiZGFmNDdiNTZkYzI3OThiZjFmYzRmZmU2MjVkZGEzMWMwNzUxYjhkYiIsInVzZXJfdHlwZV9pZCI6MSwib3JnYW5pc2F0aW9uX2lkIjoxMDEsImdjbV9yZWdfY29kZSI6bnVsbCwiZW1haWwiOiJzdXBwb3J0QHdhbGxzdHJlZXRkb2NzLmNvbSIsInRva2VuIjpudWxsLCJpYXQiOjE0NDQ2NTA2NzUsImV4cCI6MTQ0NDY2NTA3NSwiY3JlYXRlZF9hdCI6IjIwMTUtMTAtMDlUMDA6MDA6MDAuMDAwWiIsInVwZGF0ZWRfYXQiOiIyMDE1LTEwLTEyVDExOjUxOjExLjAwMFoifQ.Drk3HMh_rOqvOYxvLS7DCODCimWZ-jvYeBklAnwXAX8\n",
-			"data": [
-				{
-					"key": "username",
-					"value": "support@wallstreetdocs.com",
-					"type": "text"
-				},
-				{
-					"key": "password",
-					"value": "password123",
-					"type": "text"
-				}
-			],
-			"dataMode": "urlencoded",
-			"timestamp": 0,
-			"version": 2,
-			"time": 1444650710322
-		},
-		{
-			"collectionId": "8bc09f0a-38be-8165-4702-3275bfcf12d3",
-			"id": "1b779505-6db4-8457-c590-6848b54a3e7c",
-			"name": "GET | Auth | Logout",
-			"description": "",
-			"url": "http://localhost:8100/api/v0.1/auth/logout",
-			"method": "GET",
-			"headers": "Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmF0b3IiLCJwYXNzd29yZF9oYXNoIjoiZGFmNDdiNTZkYzI3OThiZjFmYzRmZmU2MjVkZGEzMWMwNzUxYjhkYiIsInVzZXJfdHlwZV9pZCI6MSwib3JnYW5pc2F0aW9uX2lkIjoxMDEsImdjbV9yZWdfY29kZSI6bnVsbCwiZW1haWwiOiJzdXBwb3J0QHdhbGxzdHJlZXRkb2NzLmNvbSIsInRva2VuIjpudWxsLCJpYXQiOjE0NDQ0MDU3MTgsImV4cCI6MTQ0NDQyMDExOCwiY3JlYXRlZF9hdCI6IjIwMTUtMTAtMDlUMDA6MDA6MDAuMDAwWiIsInVwZGF0ZWRfYXQiOiIyMDE1LTEwLTA5VDE1OjQ4OjMwLjAwMFoifQ.-_5Mz00eAUwJQFGMbLMBH7LTIo117lKVvqZPeWY8z_M\n",
-			"data": [
-				{
-					"key": "username",
-					"value": "support@wallstreetdocs.com",
-					"type": "text"
-				},
-				{
-					"key": "password",
-					"value": "password123",
-					"type": "text"
-				}
-			],
-			"dataMode": "urlencoded",
-			"timestamp": 0,
-			"version": 2,
-			"time": 1444405733546
-		},
-		{
-			"collectionId": "8bc09f0a-38be-8165-4702-3275bfcf12d3",
-			"id": "348c162c-9d5d-120f-07bd-062e3de53819",
-			"name": "GET All Users by Query",
-			"description": "",
-			"url": "http://localhost:8100/api/v0.1/users?q=&limit=&offset=",
-			"method": "GET",
-			"headers": "Content-Type: application/json\nAuthorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmF0b3IiLCJwYXNzd29yZF9oYXNoIjoiZGFmNDdiNTZkYzI3OThiZjFmYzRmZmU2MjVkZGEzMWMwNzUxYjhkYiIsInVzZXJfdHlwZV9pZCI6MSwib3JnYW5pc2F0aW9uX2lkIjoxMDEsImdjbV9yZWdfY29kZSI6bnVsbCwiZW1haWwiOiJzdXBwb3J0QHdhbGxzdHJlZXRkb2NzLmNvbSIsInRva2VuIjpudWxsLCJpYXQiOjE0NDQ2NTA2NzUsImV4cCI6MTQ0NDY2NTA3NSwiY3JlYXRlZF9hdCI6IjIwMTUtMTAtMDlUMDA6MDA6MDAuMDAwWiIsInVwZGF0ZWRfYXQiOiIyMDE1LTEwLTEyVDExOjUxOjExLjAwMFoifQ.Drk3HMh_rOqvOYxvLS7DCODCimWZ-jvYeBklAnwXAX8\n",
-			"data": [
-				{
-					"key": "username",
-					"value": "support@wallstreetdocs.com",
-					"type": "text"
-				},
-				{
-					"key": "password",
-					"value": "password123",
-					"type": "text"
-				}
-			],
-			"dataMode": "urlencoded",
-			"timestamp": 0,
-			"version": 2,
-			"time": 1444650722979
-		},
-		{
-			"collectionId": "8bc09f0a-38be-8165-4702-3275bfcf12d3",
-			"id": "4fea8099-2dba-a54d-21aa-2086a6d78354",
-			"name": "GET | Test | Health",
-			"description": "",
-			"url": "http://localhost:8100/api/v0.1/test/health",
-			"method": "GET",
-			"headers": "Content-Type: application/json\nAuthorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmF0b3IiLCJwYXNzd29yZF9oYXNoIjoiZGFmNDdiNTZkYzI3OThiZjFmYzRmZmU2MjVkZGEzMWMwNzUxYjhkYiIsInVzZXJfdHlwZV9pZCI6MSwib3JnYW5pc2F0aW9uX2lkIjoxMDEsImdjbV9yZWdfY29kZSI6bnVsbCwiZW1haWwiOiJzdXBwb3J0QHdhbGxzdHJlZXRkb2NzLmNvbSIsInRva2VuIjpudWxsLCJpYXQiOjE0NDQ2NTA2NzUsImV4cCI6MTQ0NDY2NTA3NSwiY3JlYXRlZF9hdCI6IjIwMTUtMTAtMDlUMDA6MDA6MDAuMDAwWiIsInVwZGF0ZWRfYXQiOiIyMDE1LTEwLTEyVDExOjUxOjExLjAwMFoifQ.Drk3HMh_rOqvOYxvLS7DCODCimWZ-jvYeBklAnwXAX8\n",
-			"data": [
-				{
-					"key": "username",
-					"value": "support@wallstreetdocs.com",
-					"type": "text"
-				},
-				{
-					"key": "password",
-					"value": "password123",
-					"type": "text"
-				}
-			],
-			"dataMode": "urlencoded",
-			"timestamp": 0,
-			"version": 2,
-			"time": 1444650698396
-		},
-		{
-			"collectionId": "8bc09f0a-38be-8165-4702-3275bfcf12d3",
-			"id": "88b1542b-1215-9a2e-d8bd-f9a03e6051ed",
-			"name": "GET | Test | Ping",
-			"description": "",
-			"url": "http://localhost:8100/api/v0.1/test/ping",
-			"method": "GET",
-			"headers": "Content-Type: application/json\n",
-			"data": [],
-			"dataMode": "params",
-			"responses": [],
-			"version": 2
-		},
-		{
-			"collectionId": "8bc09f0a-38be-8165-4702-3275bfcf12d3",
-			"id": "c51de005-d660-9ae1-4da8-78ccc5052761",
-			"name": "UPDATE a single User",
-			"description": "",
-			"url": "http://localhost:8100/api/v0.1/user/2",
+			"url": "http://localhost:8101/api/v0.1/customer/101",
 			"method": "PUT",
-			"headers": "Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmF0b3IiLCJwYXNzd29yZF9oYXNoIjoiZGFmNDdiNTZkYzI3OThiZjFmYzRmZmU2MjVkZGEzMWMwNzUxYjhkYiIsInVzZXJfdHlwZV9pZCI6MSwib3JnYW5pc2F0aW9uX2lkIjoxMDEsImdjbV9yZWdfY29kZSI6bnVsbCwiZW1haWwiOiJzdXBwb3J0QHdhbGxzdHJlZXRkb2NzLmNvbSIsInRva2VuIjpudWxsLCJpYXQiOjE0NDQ2NTA2NzUsImV4cCI6MTQ0NDY2NTA3NSwiY3JlYXRlZF9hdCI6IjIwMTUtMTAtMDlUMDA6MDA6MDAuMDAwWiIsInVwZGF0ZWRfYXQiOiIyMDE1LTEwLTEyVDExOjUxOjExLjAwMFoifQ.Drk3HMh_rOqvOYxvLS7DCODCimWZ-jvYeBklAnwXAX8\n",
+			"headers": "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmF0b3IiLCJwYXNzd29yZF9oYXNoIjoiYzQ1YWZlMzQxOTA0YzNjZjk2YWNlMjIyYjRmZmJmZGZiZGMxOGY4YiIsImlzX2FkbWluIjp0cnVlLCJlbWFpbCI6ImhlbGxvQG9uYWxsZGV2aWNlcy5jb20iLCJwcm9maWxlIjoie30iLCJ0b2tlbiI6bnVsbCwiaWF0IjoxNDQ1OTAwMDY2LCJleHAiOjE0NDYxMzMzNjksImNyZWF0ZWRfYXQiOiIyMDE1LTEwLTA5VDAwOjAwOjAwLjAwMFoiLCJ1cGRhdGVkX2F0IjoiMjAxNS0xMC0yOVQxMTozMToxNC4wMDBaIn0.4vmqh7gWkzIfqeR-kBa2P9LLgtrc2bJJyQhSHR-T1t8\n",
 			"data": [
 				{
 					"key": "name",
-					"value": "UPDATED",
+					"value": "Test over",
+					"type": "text"
+				},
+				{
+					"key": "address_1",
+					"value": "New Street",
+					"type": "text"
+				},
+				{
+					"key": "postcode",
+					"value": "AA1 1AA",
 					"type": "text"
 				},
 				{
 					"key": "email",
-					"value": "test@nowhere.com",
-					"type": "text"
-				},
-				{
-					"key": "user_type_id",
-					"value": "3",
-					"type": "text"
-				},
-				{
-					"key": "gcm_reg_code",
-					"value": "",
-					"type": "text"
-				},
-				{
-					"key": "password",
-					"value": "password123",
+					"value": "test@foo.com",
 					"type": "text"
 				}
 			],
 			"dataMode": "urlencoded",
 			"timestamp": 0,
 			"version": 2,
-			"time": 1444650748711
+			"time": 1446119846715
 		},
 		{
-			"collectionId": "8bc09f0a-38be-8165-4702-3275bfcf12d3",
-			"id": "f3287c60-f425-281d-6da1-2c3727cba764",
+			"collectionId": "47ca4b42-761c-7cbc-2146-92658e8df6dcZXT",
+			"id": "2058006e-4c2a-362a-d700-70e6a1fa147b",
+			"name": "GET | Test | Ping",
+			"description": "",
+			"url": "http://localhost:8101/api/v0.1/test/ping",
+			"method": "GET",
+			"headers": "Content-Type: application/json\n",
+			"data": [],
+			"dataMode": "params",
+			"responses": [],
+			"version": 2
+		},
+		{
+			"collectionId": "47ca4b42-761c-7cbc-2146-92658e8df6dcZXT",
+			"id": "2fc433c6-7038-964e-0863-d5e44246d8ec",
 			"name": "POST Create new User",
 			"description": "",
-			"url": "http://localhost:8100/api/v0.1/user",
+			"url": "http://localhost:8101/api/v0.1/user",
 			"method": "POST",
-			"headers": "Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmF0b3IiLCJwYXNzd29yZF9oYXNoIjoiZGFmNDdiNTZkYzI3OThiZjFmYzRmZmU2MjVkZGEzMWMwNzUxYjhkYiIsInVzZXJfdHlwZV9pZCI6MSwib3JnYW5pc2F0aW9uX2lkIjoxMDEsImdjbV9yZWdfY29kZSI6bnVsbCwiZW1haWwiOiJzdXBwb3J0QHdhbGxzdHJlZXRkb2NzLmNvbSIsInRva2VuIjpudWxsLCJpYXQiOjE0NDQ2NTA2NzUsImV4cCI6MTQ0NDY2NTA3NSwiY3JlYXRlZF9hdCI6IjIwMTUtMTAtMDlUMDA6MDA6MDAuMDAwWiIsInVwZGF0ZWRfYXQiOiIyMDE1LTEwLTEyVDExOjUxOjExLjAwMFoifQ.Drk3HMh_rOqvOYxvLS7DCODCimWZ-jvYeBklAnwXAX8\n",
+			"headers": "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmF0b3IiLCJwYXNzd29yZF9oYXNoIjoiYzQ1YWZlMzQxOTA0YzNjZjk2YWNlMjIyYjRmZmJmZGZiZGMxOGY4YiIsImlzX2FkbWluIjp0cnVlLCJlbWFpbCI6ImhlbGxvQG9uYWxsZGV2aWNlcy5jb20iLCJwcm9maWxlIjoie30iLCJ0b2tlbiI6bnVsbCwiaWF0IjoxNDQ1OTAwMDY2LCJleHAiOjE0NDYxMzMzNjksImNyZWF0ZWRfYXQiOiIyMDE1LTEwLTA5VDAwOjAwOjAwLjAwMFoiLCJ1cGRhdGVkX2F0IjoiMjAxNS0xMC0yOVQxMTozMToxNC4wMDBaIn0.4vmqh7gWkzIfqeR-kBa2P9LLgtrc2bJJyQhSHR-T1t8\n",
 			"data": [
 				{
 					"key": "name",
@@ -280,20 +104,306 @@
 					"type": "text"
 				},
 				{
-					"key": "user_type_id",
-					"value": "3",
+					"key": "is_admin",
+					"value": "true",
 					"type": "text"
 				},
 				{
-					"key": "gcm_reg_code",
-					"value": "kjhfgkjghfkghf",
+					"key": "profile",
+					"value": "{}",
 					"type": "text"
 				}
 			],
 			"dataMode": "urlencoded",
 			"timestamp": 0,
 			"version": 2,
-			"time": 1444650737820
+			"time": 1446119131874
+		},
+		{
+			"collectionId": "47ca4b42-761c-7cbc-2146-92658e8df6dcZXT",
+			"id": "3341e7cc-6fc1-0ab3-a9a9-1f8fd81f6000",
+			"name": "GET Customer by Id",
+			"description": "",
+			"url": "http://localhost:8101/api/v0.1/customer/100",
+			"method": "GET",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmF0b3IiLCJwYXNzd29yZF9oYXNoIjoiYzQ1YWZlMzQxOTA0YzNjZjk2YWNlMjIyYjRmZmJmZGZiZGMxOGY4YiIsImlzX2FkbWluIjp0cnVlLCJlbWFpbCI6ImhlbGxvQG9uYWxsZGV2aWNlcy5jb20iLCJwcm9maWxlIjoie30iLCJ0b2tlbiI6bnVsbCwiaWF0IjoxNDQ1OTAwMDY2LCJleHAiOjE0NDYxMzMzNjksImNyZWF0ZWRfYXQiOiIyMDE1LTEwLTA5VDAwOjAwOjAwLjAwMFoiLCJ1cGRhdGVkX2F0IjoiMjAxNS0xMC0yOVQxMTozMToxNC4wMDBaIn0.4vmqh7gWkzIfqeR-kBa2P9LLgtrc2bJJyQhSHR-T1t8\n",
+			"data": [],
+			"dataMode": "urlencoded",
+			"timestamp": 0,
+			"version": 2,
+			"time": 1446119820432
+		},
+		{
+			"collectionId": "47ca4b42-761c-7cbc-2146-92658e8df6dcZXT",
+			"id": "5e05d480-68dd-b76c-7541-5a644f3affca",
+			"name": "UPDATE a single User",
+			"description": "",
+			"url": "http://localhost:8101/api/v0.1/user/2",
+			"method": "PUT",
+			"headers": "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmF0b3IiLCJwYXNzd29yZF9oYXNoIjoiYzQ1YWZlMzQxOTA0YzNjZjk2YWNlMjIyYjRmZmJmZGZiZGMxOGY4YiIsImlzX2FkbWluIjp0cnVlLCJlbWFpbCI6ImhlbGxvQG9uYWxsZGV2aWNlcy5jb20iLCJwcm9maWxlIjoie30iLCJ0b2tlbiI6bnVsbCwiaWF0IjoxNDQ1OTAwMDY2LCJleHAiOjE0NDYxMzMzNjksImNyZWF0ZWRfYXQiOiIyMDE1LTEwLTA5VDAwOjAwOjAwLjAwMFoiLCJ1cGRhdGVkX2F0IjoiMjAxNS0xMC0yOVQxMTozMToxNC4wMDBaIn0.4vmqh7gWkzIfqeR-kBa2P9LLgtrc2bJJyQhSHR-T1t8\n",
+			"data": [
+				{
+					"key": "name",
+					"value": "UPDATED",
+					"type": "text"
+				},
+				{
+					"key": "email",
+					"value": "test@nowhere.com",
+					"type": "text"
+				},
+				{
+					"key": "is_admin",
+					"value": "true",
+					"type": "text"
+				},
+				{
+					"key": "profile",
+					"value": "{\"certification\": {}}",
+					"type": "text"
+				},
+				{
+					"key": "password",
+					"value": "password123",
+					"type": "text"
+				}
+			],
+			"dataMode": "urlencoded",
+			"timestamp": 0,
+			"version": 2,
+			"time": 1446119272489
+		},
+		{
+			"collectionId": "47ca4b42-761c-7cbc-2146-92658e8df6dcZXT",
+			"id": "61bf7dfc-252c-2391-f888-04386470c949",
+			"name": "GET | Auth | Hash",
+			"description": "",
+			"url": "http://localhost:8101/api/v0.1/auth/hash/admin/password123",
+			"method": "GET",
+			"headers": "Content-Type: application/json\n",
+			"data": [],
+			"dataMode": "params",
+			"responses": [],
+			"version": 2
+		},
+		{
+			"collectionId": "47ca4b42-761c-7cbc-2146-92658e8df6dcZXT",
+			"id": "7a1c365b-5eb2-6b70-e42d-76e4acbe4e59",
+			"name": "GET User by Id",
+			"description": "",
+			"url": "http://localhost:8101/api/v0.1/user/1",
+			"method": "GET",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmF0b3IiLCJwYXNzd29yZF9oYXNoIjoiYzQ1YWZlMzQxOTA0YzNjZjk2YWNlMjIyYjRmZmJmZGZiZGMxOGY4YiIsImlzX2FkbWluIjp0cnVlLCJlbWFpbCI6ImhlbGxvQG9uYWxsZGV2aWNlcy5jb20iLCJwcm9maWxlIjoie30iLCJ0b2tlbiI6bnVsbCwiaWF0IjoxNDQ1OTAwMDY2LCJleHAiOjE0NDYxMzMzNjksImNyZWF0ZWRfYXQiOiIyMDE1LTEwLTA5VDAwOjAwOjAwLjAwMFoiLCJ1cGRhdGVkX2F0IjoiMjAxNS0xMC0yOVQxMTozMToxNC4wMDBaIn0.4vmqh7gWkzIfqeR-kBa2P9LLgtrc2bJJyQhSHR-T1t8\n",
+			"data": [],
+			"dataMode": "urlencoded",
+			"timestamp": 0,
+			"version": 2,
+			"time": 1446119309290
+		},
+		{
+			"collectionId": "47ca4b42-761c-7cbc-2146-92658e8df6dcZXT",
+			"id": "7b7524af-bf29-63b5-8a5d-fd645f084b26",
+			"name": "GET All Customers",
+			"description": "",
+			"url": "http://localhost:8101/api/v0.1/customers?q=&limit=&offset=",
+			"method": "GET",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmF0b3IiLCJwYXNzd29yZF9oYXNoIjoiYzQ1YWZlMzQxOTA0YzNjZjk2YWNlMjIyYjRmZmJmZGZiZGMxOGY4YiIsImlzX2FkbWluIjp0cnVlLCJlbWFpbCI6ImhlbGxvQG9uYWxsZGV2aWNlcy5jb20iLCJwcm9maWxlIjoie30iLCJ0b2tlbiI6bnVsbCwiaWF0IjoxNDQ1OTAwMDY2LCJleHAiOjE0NDYxMzMzNjksImNyZWF0ZWRfYXQiOiIyMDE1LTEwLTA5VDAwOjAwOjAwLjAwMFoiLCJ1cGRhdGVkX2F0IjoiMjAxNS0xMC0yOVQxMTozMToxNC4wMDBaIn0.4vmqh7gWkzIfqeR-kBa2P9LLgtrc2bJJyQhSHR-T1t8\n",
+			"data": [],
+			"dataMode": "urlencoded",
+			"timestamp": 0,
+			"version": 2,
+			"time": 1446119809777
+		},
+		{
+			"collectionId": "47ca4b42-761c-7cbc-2146-92658e8df6dcZXT",
+			"id": "8eff62f2-d753-52e2-a459-0b0bedf12697",
+			"name": "DELETE a single Customer",
+			"description": "",
+			"url": "http://localhost:8101/api/v0.1/customer/101",
+			"method": "DELETE",
+			"headers": "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmF0b3IiLCJwYXNzd29yZF9oYXNoIjoiYzQ1YWZlMzQxOTA0YzNjZjk2YWNlMjIyYjRmZmJmZGZiZGMxOGY4YiIsImlzX2FkbWluIjp0cnVlLCJlbWFpbCI6ImhlbGxvQG9uYWxsZGV2aWNlcy5jb20iLCJwcm9maWxlIjoie30iLCJ0b2tlbiI6bnVsbCwiaWF0IjoxNDQ1OTAwMDY2LCJleHAiOjE0NDYxMzMzNjksImNyZWF0ZWRfYXQiOiIyMDE1LTEwLTA5VDAwOjAwOjAwLjAwMFoiLCJ1cGRhdGVkX2F0IjoiMjAxNS0xMC0yOVQxMTozMToxNC4wMDBaIn0.4vmqh7gWkzIfqeR-kBa2P9LLgtrc2bJJyQhSHR-T1t8\n",
+			"data": [],
+			"dataMode": "urlencoded",
+			"timestamp": 0,
+			"version": 2,
+			"time": 1446119838265
+		},
+		{
+			"collectionId": "47ca4b42-761c-7cbc-2146-92658e8df6dcZXT",
+			"id": "95995066-98fc-ba66-25ea-79d45b861918",
+			"name": "UPDATE the current users profile",
+			"description": "",
+			"url": "http://localhost:8101/api/v0.1/user/me",
+			"method": "PUT",
+			"headers": "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmF0b3IiLCJwYXNzd29yZF9oYXNoIjoiYzQ1YWZlMzQxOTA0YzNjZjk2YWNlMjIyYjRmZmJmZGZiZGMxOGY4YiIsImlzX2FkbWluIjp0cnVlLCJlbWFpbCI6ImhlbGxvQG9uYWxsZGV2aWNlcy5jb20iLCJwcm9maWxlIjoie30iLCJ0b2tlbiI6bnVsbCwiaWF0IjoxNDQ1OTAwMDY2LCJleHAiOjE0NDYxMzMzNjksImNyZWF0ZWRfYXQiOiIyMDE1LTEwLTA5VDAwOjAwOjAwLjAwMFoiLCJ1cGRhdGVkX2F0IjoiMjAxNS0xMC0yOVQxMTozMToxNC4wMDBaIn0.4vmqh7gWkzIfqeR-kBa2P9LLgtrc2bJJyQhSHR-T1t8\nContent-Type: application/json\n",
+			"data": "{\n  \"certification\": {\n    \"level\": 1, \"date\": 123456789 \n  }\n}",
+			"dataMode": "raw",
+			"timestamp": 0,
+			"version": 2,
+			"time": 1446120855856
+		},
+		{
+			"collectionId": "47ca4b42-761c-7cbc-2146-92658e8df6dcZXT",
+			"id": "9b6ac92e-3085-6e7f-41eb-b36065628d75",
+			"name": "POST | Auth | Login",
+			"description": "",
+			"url": "http://localhost:8101/api/v0.1/auth/login",
+			"method": "POST",
+			"headers": "",
+			"data": [
+				{
+					"key": "username",
+					"value": "hello@onalldevices.com",
+					"type": "text"
+				},
+				{
+					"key": "password",
+					"value": "password123",
+					"type": "text"
+				}
+			],
+			"dataMode": "urlencoded",
+			"timestamp": 0,
+			"version": 2,
+			"time": 1445900073930
+		},
+		{
+			"collectionId": "47ca4b42-761c-7cbc-2146-92658e8df6dcZXT",
+			"id": "a9687c44-2bd3-a8da-35ba-206038084c58",
+			"name": "GET | Auth | Test",
+			"description": "",
+			"url": "http://localhost:8101/api/v0.1/auth/test",
+			"method": "GET",
+			"headers": "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmF0b3IiLCJwYXNzd29yZF9oYXNoIjoiYzQ1YWZlMzQxOTA0YzNjZjk2YWNlMjIyYjRmZmJmZGZiZGMxOGY4YiIsImlzX2FkbWluIjp0cnVlLCJlbWFpbCI6ImhlbGxvQG9uYWxsZGV2aWNlcy5jb20iLCJwcm9maWxlIjoie30iLCJ0b2tlbiI6bnVsbCwiaWF0IjoxNDQ1OTAwMDY2LCJleHAiOjE0NDYxMzMzNjksImNyZWF0ZWRfYXQiOiIyMDE1LTEwLTA5VDAwOjAwOjAwLjAwMFoiLCJ1cGRhdGVkX2F0IjoiMjAxNS0xMC0yOVQxMTozMToxNC4wMDBaIn0.4vmqh7gWkzIfqeR-kBa2P9LLgtrc2bJJyQhSHR-T1t8\n",
+			"data": [
+				{
+					"key": "username",
+					"value": "hello@onalldevices.com",
+					"type": "text"
+				},
+				{
+					"key": "password",
+					"value": "password123",
+					"type": "text"
+				}
+			],
+			"dataMode": "urlencoded",
+			"timestamp": 0,
+			"version": 2,
+			"time": 1446118998269
+		},
+		{
+			"collectionId": "47ca4b42-761c-7cbc-2146-92658e8df6dcZXT",
+			"id": "cfa305b7-b7c2-02ee-88d2-370a87f01844",
+			"name": "DELETE a single User",
+			"description": "",
+			"url": "http://localhost:8101/api/v0.1/user/2",
+			"method": "DELETE",
+			"headers": "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmF0b3IiLCJwYXNzd29yZF9oYXNoIjoiYzQ1YWZlMzQxOTA0YzNjZjk2YWNlMjIyYjRmZmJmZGZiZGMxOGY4YiIsImlzX2FkbWluIjp0cnVlLCJlbWFpbCI6ImhlbGxvQG9uYWxsZGV2aWNlcy5jb20iLCJwcm9maWxlIjoie30iLCJ0b2tlbiI6bnVsbCwiaWF0IjoxNDQ1OTAwMDY2LCJleHAiOjE0NDYxMzMzNjksImNyZWF0ZWRfYXQiOiIyMDE1LTEwLTA5VDAwOjAwOjAwLjAwMFoiLCJ1cGRhdGVkX2F0IjoiMjAxNS0xMC0yOVQxMTozMToxNC4wMDBaIn0.4vmqh7gWkzIfqeR-kBa2P9LLgtrc2bJJyQhSHR-T1t8\n",
+			"data": [],
+			"dataMode": "urlencoded",
+			"timestamp": 0,
+			"version": 2,
+			"time": 1446119158483
+		},
+		{
+			"collectionId": "47ca4b42-761c-7cbc-2146-92658e8df6dcZXT",
+			"id": "e22ad0f6-4bec-60e5-5549-b606f20aee5f",
+			"name": "GET | Auth | Logout",
+			"description": "",
+			"url": "http://localhost:8101/api/v0.1/auth/logout",
+			"method": "GET",
+			"headers": "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmF0b3IiLCJwYXNzd29yZF9oYXNoIjoiYzQ1YWZlMzQxOTA0YzNjZjk2YWNlMjIyYjRmZmJmZGZiZGMxOGY4YiIsImlzX2FkbWluIjp0cnVlLCJlbWFpbCI6ImhlbGxvQG9uYWxsZGV2aWNlcy5jb20iLCJ0b2tlbiI6bnVsbCwiaWF0IjoxNDQ1ODk5ODkwLCJleHAiOjE0NDU5MTQyOTAsImNyZWF0ZWRfYXQiOiIyMDE1LTEwLTA5VDAwOjAwOjAwLjAwMFoiLCJ1cGRhdGVkX2F0IjoiMjAxNS0xMC0yNlQyMjo0NzoyOC4wMDBaIn0.a8H-rMD7bIK6_NgC-7TJa-se-J1yRaDKc9tDPyb1ggM\n",
+			"data": [
+				{
+					"key": "username",
+					"value": "hello@onalldevices.com",
+					"type": "text"
+				},
+				{
+					"key": "password",
+					"value": "password123",
+					"type": "text"
+				}
+			],
+			"dataMode": "urlencoded",
+			"timestamp": 0,
+			"version": 2,
+			"time": 1445899926915
+		},
+		{
+			"collectionId": "47ca4b42-761c-7cbc-2146-92658e8df6dcZXT",
+			"id": "ed3adfec-00ab-4915-2535-8ee1f4ea5fda",
+			"name": "POST Create new Customer",
+			"description": "",
+			"url": "http://localhost:8101/api/v0.1/customer",
+			"method": "POST",
+			"headers": "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmF0b3IiLCJwYXNzd29yZF9oYXNoIjoiYzQ1YWZlMzQxOTA0YzNjZjk2YWNlMjIyYjRmZmJmZGZiZGMxOGY4YiIsImlzX2FkbWluIjp0cnVlLCJlbWFpbCI6ImhlbGxvQG9uYWxsZGV2aWNlcy5jb20iLCJwcm9maWxlIjoie30iLCJ0b2tlbiI6bnVsbCwiaWF0IjoxNDQ1OTAwMDY2LCJleHAiOjE0NDYxMzMzNjksImNyZWF0ZWRfYXQiOiIyMDE1LTEwLTA5VDAwOjAwOjAwLjAwMFoiLCJ1cGRhdGVkX2F0IjoiMjAxNS0xMC0yOVQxMTozMToxNC4wMDBaIn0.4vmqh7gWkzIfqeR-kBa2P9LLgtrc2bJJyQhSHR-T1t8\n",
+			"data": [
+				{
+					"key": "name",
+					"value": "Test I. Cular",
+					"type": "text"
+				},
+				{
+					"key": "address_1",
+					"value": "1 The Street",
+					"type": "text"
+				},
+				{
+					"key": "postcode",
+					"value": "AA1 1AA",
+					"type": "text"
+				},
+				{
+					"key": "email",
+					"value": "foo@bar.com",
+					"type": "text"
+				}
+			],
+			"dataMode": "urlencoded",
+			"timestamp": 0,
+			"version": 2,
+			"time": 1446119831774
+		},
+		{
+			"collectionId": "47ca4b42-761c-7cbc-2146-92658e8df6dcZXT",
+			"id": "f5376928-62a6-e442-3b7f-895ecac25126",
+			"name": "GET All Users by Query",
+			"description": "",
+			"url": "http://localhost:8101/api/v0.1/users?q=&limit=&offset=",
+			"method": "GET",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmF0b3IiLCJwYXNzd29yZF9oYXNoIjoiYzQ1YWZlMzQxOTA0YzNjZjk2YWNlMjIyYjRmZmJmZGZiZGMxOGY4YiIsImlzX2FkbWluIjp0cnVlLCJlbWFpbCI6ImhlbGxvQG9uYWxsZGV2aWNlcy5jb20iLCJwcm9maWxlIjoie30iLCJ0b2tlbiI6bnVsbCwiaWF0IjoxNDQ1OTAwMDY2LCJleHAiOjE0NDYxMzMzNjksImNyZWF0ZWRfYXQiOiIyMDE1LTEwLTA5VDAwOjAwOjAwLjAwMFoiLCJ1cGRhdGVkX2F0IjoiMjAxNS0xMC0yOVQxMTozMToxNC4wMDBaIn0.4vmqh7gWkzIfqeR-kBa2P9LLgtrc2bJJyQhSHR-T1t8\n",
+			"data": [
+				{
+					"key": "username",
+					"value": "hello@onalldevices.com",
+					"type": "text"
+				},
+				{
+					"key": "password",
+					"value": "password123",
+					"type": "text"
+				}
+			],
+			"dataMode": "urlencoded",
+			"timestamp": 0,
+			"version": 2,
+			"time": 1446119017015
+		},
+		{
+			"collectionId": "47ca4b42-761c-7cbc-2146-92658e8df6dcZXT",
+			"id": "f7c2b663-b4b3-c917-e398-92a28c39fed5",
+			"name": "GET | Test | Health",
+			"description": "",
+			"url": "http://localhost:8101/api/v0.1/test/health",
+			"method": "GET",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmF0b3IiLCJwYXNzd29yZF9oYXNoIjoiYzQ1YWZlMzQxOTA0YzNjZjk2YWNlMjIyYjRmZmJmZGZiZGMxOGY4YiIsImlzX2FkbWluIjp0cnVlLCJlbWFpbCI6ImhlbGxvQG9uYWxsZGV2aWNlcy5jb20iLCJwcm9maWxlIjoie30iLCJ0b2tlbiI6bnVsbCwiaWF0IjoxNDQ1OTAwMDY2LCJleHAiOjE0NDYxMzMzNjksImNyZWF0ZWRfYXQiOiIyMDE1LTEwLTA5VDAwOjAwOjAwLjAwMFoiLCJ1cGRhdGVkX2F0IjoiMjAxNS0xMC0yOVQxMTozMToxNC4wMDBaIn0.4vmqh7gWkzIfqeR-kBa2P9LLgtrc2bJJyQhSHR-T1t8\n",
+			"data": [],
+			"dataMode": "urlencoded",
+			"timestamp": 0,
+			"version": 2,
+			"time": 1446119575273
 		}
 	]
 }

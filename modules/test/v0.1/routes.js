@@ -1,17 +1,18 @@
 /*
-	Initialise routing for the Test module
+    Version 0.1 Test module
  */
-module.exports = function(router, authRouter){
+module.exports = function( config, server, router, models ){
 
 	/*
 	 Version 0.1
 	 */
-	var controller = require(__dirname + '/controllers/test.js')();
+	var passport = require(__dirname + '/../../auth/v0.1/passport')(config, server);
+	var controller = require(__dirname + '/controllers/test.js')(config, models);
 
 	// Implement simple ping test - non authenticated
 	router.get('/v0.1/test/ping', controller.getPing);
 
 	// Implement a full health check - authenticated
-	authRouter.get('/v0.1/test/health', controller.getHealth);
+	router.get('/v0.1/test/health', passport.authenticate('local-bearer', { session: false }), controller.getHealth);
 
 };

@@ -5,7 +5,6 @@ var api_url = '/api';
 // Configure routing
 var express = require('express');
 var apiRouter = express.Router();
-var authApiRouter = express.Router();
 
 // Start express router
 var server = express();
@@ -18,30 +17,32 @@ server.use(useragent.express());
 server.use(bodyParser.json());
 server.use(bodyParser.urlencoded());
 
-// Assign both auth'd and non-auth'd routers
+// Prep Auth Module
+var AuthModule = require(__dirname + '/modules/auth');
+AuthModule.initPassport(server);
+AuthModule.initRoutes(apiRouter);
+
+// Assign routers
 server.use(api_url, apiRouter);
-server.use(api_url, authApiRouter);
 
 // Enable CORS
 var cors = require(__dirname + '/middleware/cors');
-cors(authApiRouter);
 cors(apiRouter);
 
 /*
-	Load custom modules
+	Load custom modules - pass in server and router objects
  */
-
-// Auth
-var AuthModule = require(__dirname + '/modules/auth');
-AuthModule.initRoutes(apiRouter, authApiRouter);
 
 // Test
 var TestModule = require(__dirname + '/modules/test');
-TestModule.initRoutes(apiRouter, authApiRouter);
+TestModule.initRoutes(server, apiRouter);
 
 // Users
 var UsersModule = require(__dirname + '/modules/users');
-UsersModule.initRoutes(apiRouter, authApiRouter);
+UsersModule.initRoutes(server, apiRouter);
+
+// Sync data models - after module load to get all models for all modules
+config.sequelize.sync();
 
 // Configure application error handler
 server.use(function(err, req, res, next) {
