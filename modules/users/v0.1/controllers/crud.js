@@ -65,9 +65,9 @@ module.exports = function ( config, models ) {
 		addOne: function ( req, res, next ) {
 
 			// Check that the current user is an admin
-			if (req.user.user_type_id != UsersService.userTypes.Admin.id){
+			/*if (req.user.user_type_id != UsersService.userTypes.Admin.id){
 				return res.status(401).send('Unauthorized.');
-			}
+			}*/
 
 			// Attempt to create the user record
 			UsersService.create(req.body).then(
