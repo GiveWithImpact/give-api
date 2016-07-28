@@ -25,7 +25,7 @@ switch ( exports.environment ) {
 	case 'staging':
 		exports.server = {
 			host: '0.0.0.0',
-			port: process.env.PORT || 8101
+			port: process.env.PORT || 4000
 		};
 		exports.database = {
 			host    : 'localhost',
